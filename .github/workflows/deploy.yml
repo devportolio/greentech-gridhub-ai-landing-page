@@ -3,9 +3,6 @@ on: [push, pull_request]
 jobs:
   vercel:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
     steps:
       - uses: actions/checkout@v2
       #add env file to .env.local
@@ -15,7 +12,7 @@ jobs:
           token: ${{ secrets.GRIDHUB_AI_VERCEL_TOKEN }}
           # teamId: ${{ secrets.VERCEL_TEAM_ID }} # optional, without will use personal
           projectName: gridhub-ai-landing-page # project name in Vercel
-          envVariableKeys: GRIDHUB_AI_VERCEL_TOKEN
+          #envVariableKeys: GRIDHUB_AI_VERCEL_TOKEN
         #env:
           #MONGODB_URL: ${{ secrets.MONGODB_URL }}
           #TARGET_MONGODB_URL: preview,development,production # comma delimited, one of [production, preview, development]
