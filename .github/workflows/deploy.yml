@@ -13,7 +13,7 @@ jobs:
           # teamId: ${{ secrets.VERCEL_TEAM_ID }} # optional, without will use personal
           projectName: gridhub-ai-landing-page # project name in Vercel
           #envVariableKeys: MONGODB_URL,MONGODB_DB
-        env:
+        #env:
           #MONGODB_URL: ${{ secrets.MONGODB_URL }}
           #TARGET_MONGODB_URL: preview,development,production # comma delimited, one of [production, preview, development]
           #TYPE_MONGODB_URL: encrypted # one of [plain, encrypted]
