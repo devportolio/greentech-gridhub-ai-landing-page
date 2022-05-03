@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://www.gridhub.ai">Gridhub AI!</a>
+          Welcome to <a href="https://www.gridhub.ai">Gridhub AI! - DEV</a>
         </h1>
       </main>
 
