@@ -1,4 +1,4 @@
-name: deploy gridhub ai landing page to vercel
+name: Deploy to Test
 on: [push, pull_request]
 jobs:
   vercel:
