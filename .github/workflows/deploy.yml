@@ -12,18 +12,6 @@ jobs:
           token: ${{ secrets.GRIDHUB_AI_VERCEL_TOKEN }}
           # teamId: ${{ secrets.VERCEL_TEAM_ID }} # optional, without will use personal
           projectName: gridhub-ai-landing-page # project name in Vercel
-          envVariableKeys: GRIDHUB_AI_VERCEL_TOKEN,ORG_ID,PROJECT_ID
-        env:
-          GRIDHUB_AI_VERCEL_TOKEN: ${{ secrets.GRIDHUB_AI_VERCEL_TOKEN }}
-          ORG_ID: ${{ secrets.ORG_ID }}
-          PROJECT_ID: ${{ secrets.PROJECT_ID }}
-          #MONGODB_URL: ${{ secrets.MONGODB_URL }}
-          #TARGET_MONGODB_URL: preview,development,production # comma delimited, one of [production, preview, development]
-          #TYPE_MONGODB_URL: encrypted # one of [plain, encrypted]
-          #MONGODB_DB: ${{ secrets.MONGODB_DB }}
-          #TARGET_MONGODB_DB: preview,development,production
-          #TYPE_MONGODB_DB: encrypted
-
       # deploy app to vercel
       - name: deploy site to vercel
         uses: amondnet/vercel-action@v20
