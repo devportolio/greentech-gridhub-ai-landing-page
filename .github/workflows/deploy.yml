@@ -1,4 +1,4 @@
-name: Deploy to Test
+name: deploy nexturl to vercel
 on: [push, pull_request]
 jobs:
   vercel:
@@ -10,9 +10,17 @@ jobs:
         uses: dkershner6/vercel-set-env-action@v1
         with:
           token: ${{ secrets.GRIDHUB_AI_VERCEL_TOKEN }}
-          # teamId: ${{ secrets.VERCEL_TEAM_ID }} # optional, without will use personal
-          projectName: gridhub-ai-landing-page # project name in Vercel
-          envVariableKeys: GRIDHUB_AI_VERCEL_TOKEN
+          #teamId: ${{ secrets.VERCEL_TEAM_ID }} # optional, without will use personal
+          projectName: nexturl # project name in Vercel
+          envVariableKeys: MONGODB_URL,MONGODB_DB
+        env:
+          MONGODB_URL: ${{ secrets.MONGODB_URL }}
+          TARGET_MONGODB_URL: preview,development,production # comma delimited, one of [production, preview, development]
+          TYPE_MONGODB_URL: encrypted # one of [plain, encrypted]
+          MONGODB_DB: ${{ secrets.MONGODB_DB }}
+          TARGET_MONGODB_DB: preview,development,production
+          TYPE_MONGODB_DB: encrypted
+
       # deploy app to vercel
       - name: deploy site to vercel
         uses: amondnet/vercel-action@v20
@@ -21,4 +29,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
           vercel-args: '--prod' #Optional
           vercel-org-id: ${{ secrets.ORG_ID}}  #Required
-          vercel-project-id: ${{ secrets.PROJECT_ID}} #Required
+          vercel-project-id: ${{ secrets.PROJECT_ID}} #Required f
