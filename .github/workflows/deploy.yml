@@ -22,4 +22,3 @@ jobs:
           vercel-args: '--prod' #Optional
           vercel-org-id: ${{ secrets.ORG_ID}}  #Required
           vercel-project-id: ${{ secrets.PROJECT_ID}} #Required
-          envVariableKeys: GRIDHUB_AI_VERCEL_TOKEN,GITHUB_TOKEN,ORG_ID,PROJECT_ID
