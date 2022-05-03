@@ -11,7 +11,7 @@ jobs:
         with:
           token: ${{ secrets.GRIDHUB_AI_VERCEL_TOKEN }}
           #teamId: ${{ secrets.VERCEL_TEAM_ID }} # optional, without will use personal
-          projectName: nexturl # project name in Vercel
+          projectName: gridhub-ai-landing-page # project name in Vercel
           envVariableKeys: MONGODB_URL,MONGODB_DB
         env:
           MONGODB_URL: ${{ secrets.MONGODB_URL }}
